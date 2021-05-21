@@ -1,0 +1,15 @@
+# -*- coding: UTF-8 -*-
+"""
+    @Project ：microblog 
+    @Author  ：cong.jin
+    @Date    ：2021/5/21 14:21 
+"""
+import os
+
+basedir = os.path.abspath(os.path.dirname(__file__))
+
+
+class Config(object):
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'app.db')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
