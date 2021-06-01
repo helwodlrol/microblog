@@ -11,6 +11,7 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap
+from flask_moment import Moment
 import logging
 from logging.handlers import RotatingFileHandler, SMTPHandler
 import os
@@ -30,6 +31,8 @@ login.login_view = 'login'
 mail = Mail(app)
 # bootstrap
 bootstrap = Bootstrap(app)
+# moment
+moment = Moment(app)
 # logging
 # local smtp server: (venv) $ python -m smtpd -n -c DebuggingServer localhost:8025
 # if not app.debug:
