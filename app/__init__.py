@@ -4,7 +4,7 @@
     @Author  ：cong.jin
     @Date    ：2021/5/21 10:25 
 """
-from flask import Flask
+from flask import Flask, request
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -12,12 +12,13 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
+from flask_babel import Babel, lazy_gettext as _l
 import logging
 from logging.handlers import RotatingFileHandler, SMTPHandler
 import os
 
 # app
-app = Flask(__name__, template_folder='../templates')
+app = Flask(__name__)
 # config
 app.config.from_object(Config)
 # db
@@ -27,12 +28,15 @@ migrate = Migrate(app, db)
 # login
 login = LoginManager(app)
 login.login_view = 'login'
+login.login_message = _l('Please login to access this page.')
 # mail
 mail = Mail(app)
 # bootstrap
 bootstrap = Bootstrap(app)
 # moment
 moment = Moment(app)
+# babel
+babel = Babel(app)
 # logging
 # local smtp server: (venv) $ python -m smtpd -n -c DebuggingServer localhost:8025
 # if not app.debug:
@@ -60,6 +64,11 @@ if not app.debug:
     app.logger.addHandler(file_handler)
     app.logger.setLevel(logging.INFO)
     app.logger.info('Microblog startup...')
+
+
+@babel.localeselector
+def get_locale():
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
 from app import routes, models, errors

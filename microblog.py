@@ -4,7 +4,7 @@
     @Author  ：cong.jin
     @Date    ：2021/5/21 11:08 
 """
-from app import app, db
+from app import app, db, cli
 from app.models import User, Post
 
 
