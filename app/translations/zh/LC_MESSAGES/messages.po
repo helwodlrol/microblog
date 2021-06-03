@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-06-02 17:43+0800\n"
+"POT-Creation-Date: 2021-06-03 13:39+0800\n"
 "PO-Revision-Date: 2021-06-02 17:43+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh\n"
@@ -42,7 +42,7 @@ msgstr "密码"
 msgid "Remember Me"
 msgstr "记住我"
 
-#: app/forms.py:22 app/routes.py:118 templates/login.html:5
+#: app/forms.py:22 app/routes.py:123 app/templates/login.html:5
 msgid "Sign In"
 msgstr "登陆"
 
@@ -58,7 +58,7 @@ msgstr "重复密码"
 msgid "password"
 msgstr "密码"
 
-#: app/forms.py:30 app/routes.py:70 templates/register.html:5
+#: app/forms.py:30 app/routes.py:75 app/templates/register.html:5
 msgid "Register"
 msgstr "注册"
 
@@ -82,166 +82,182 @@ msgstr "说点什么"
 msgid "Request Password Reset"
 msgstr "请求重置密码"
 
-#: app/routes.py:36
+#: app/routes.py:41
 msgid "Your post is now live!"
 msgstr "你的帖子已发布！"
 
-#: app/routes.py:43 templates/base.html:26
+#: app/routes.py:48 app/templates/base.html:26
 msgid "Home"
 msgstr "主页"
 
-#: app/routes.py:54 templates/base.html:27
+#: app/routes.py:59 app/templates/base.html:27
 msgid "Explore"
 msgstr "探索"
 
-#: app/routes.py:68
+#: app/routes.py:73
 msgid "Congratulations, you are now a registered user!"
 msgstr "恭喜，您已成功注册！"
 
-#: app/routes.py:82
+#: app/routes.py:87
 msgid "Check your email for the instructions to reset your password."
 msgstr "请检查您的电子邮件以获取重置密码的说明。"
 
-#: app/routes.py:84 templates/reset_password_request.html:5
+#: app/routes.py:89 app/templates/reset_password_request.html:5
 msgid "Reset Password"
 msgstr "重置密码"
 
-#: app/routes.py:98
+#: app/routes.py:103
 msgid "Your password has been reset."
 msgstr "您的密码已重置。"
 
-#: app/routes.py:111
+#: app/routes.py:116
 msgid "Invalid username or password!"
 msgstr "非法的用户名或密码！"
 
-#: app/routes.py:148
+#: app/routes.py:153
 msgid "Your changes have been saved!"
 msgstr "您的修改已保存！"
 
-#: app/routes.py:153 templates/edit_profile.html:5
+#: app/routes.py:158 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "编辑"
 
-#: app/routes.py:161 app/routes.py:177
+#: app/routes.py:166 app/routes.py:182
 #, python-format
 msgid "User %(username)s not found!"
 msgstr "用户 %(username)s 不存在！"
 
-#: app/routes.py:164
+#: app/routes.py:169
 msgid "You cannot follow yourself!"
 msgstr "你不能关注你自己！"
 
-#: app/routes.py:168
+#: app/routes.py:173
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "你已关注 %(username)s！"
 
-#: app/routes.py:180
+#: app/routes.py:185
 msgid "You cannot unfollow yourself!"
 msgstr "你不能取消关注你自己！"
 
-#: app/routes.py:184
+#: app/routes.py:189
 #, python-format
 msgid "You are not following %(username)s!"
 msgstr "你已取消关注 %(username)s！"
 
-#: templates/404.html:4
+#: app/translate.py:14
+msgid "Error: the translation service is not configured."
+msgstr "错误：翻译服务未配置！"
+
+#: app/translate.py:23
+msgid "Error: the translation service failed."
+msgstr "错误：翻译服务失败！"
+
+#: app/templates/404.html:4
 msgid "Not Found"
 msgstr "找不到"
 
-#: templates/404.html:5 templates/500.html:6
+#: app/templates/404.html:5 app/templates/500.html:6
 msgid "Back"
 msgstr "返回"
 
-#: templates/500.html:4
+#: app/templates/500.html:4
 msgid "An unexpected error has occurred"
 msgstr "发生意外的错误"
 
-#: templates/500.html:5
+#: app/templates/500.html:5
 msgid "The administrator has been notified. Sorry for the inconvenience!"
 msgstr "已通知管理员。带来不便敬请谅解！"
 
-#: templates/_post.html:14
+#: app/templates/_post.html:14
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s 说 %(when)s"
 
-#: templates/base.html:7
+#: app/templates/_post.html:24
+msgid "Translate"
+msgstr "翻译"
+
+#: app/templates/base.html:7
 msgid "Welcome to Microblog"
 msgstr "欢迎来到Microblog"
 
-#: templates/base.html:31
+#: app/templates/base.html:31
 msgid "Login"
 msgstr "登陆"
 
-#: templates/base.html:33
+#: app/templates/base.html:33
 msgid "Profile"
 msgstr "个人信息"
 
-#: templates/base.html:34
+#: app/templates/base.html:34
 msgid "Logout"
 msgstr "退出"
 
-#: templates/index.html:5
+#: app/templates/base.html:71
+msgid "Error: Could not contact server."
+msgstr "错误：不能连接服务器！"
+
+#: app/templates/index.html:5
 #, python-format
 msgid "Hi, %(username)s!"
 msgstr "你好, %(username)s!"
 
-#: templates/index.html:17 templates/user.html:41
+#: app/templates/index.html:17 app/templates/user.html:41
 msgid "Newer posts"
 msgstr "上一页"
 
-#: templates/index.html:22 templates/user.html:46
+#: app/templates/index.html:22 app/templates/user.html:46
 msgid "Older posts"
 msgstr "下一页"
 
-#: templates/login.html:12
+#: app/templates/login.html:12
 msgid "New User?"
 msgstr "新用户？"
 
-#: templates/login.html:12
+#: app/templates/login.html:12
 msgid "Click to Register!"
 msgstr "点击注册！"
 
-#: templates/login.html:14
+#: app/templates/login.html:14
 msgid "Forgot Your Password?"
 msgstr "忘记密码？"
 
-#: templates/login.html:15
+#: app/templates/login.html:15
 msgid "Click to Reset It"
 msgstr "点击重置"
 
-#: templates/reset_password.html:5
+#: app/templates/reset_password.html:5
 msgid "Reset Your Password"
 msgstr "重置密码"
 
-#: templates/user.html:8
+#: app/templates/user.html:8
 msgid "User"
 msgstr "用户"
 
-#: templates/user.html:11
+#: app/templates/user.html:11
 msgid "Last seen on"
 msgstr "上次登录"
 
-#: templates/user.html:13
+#: app/templates/user.html:13
 #, python-format
 msgid "%(count)d followers"
 msgstr "%(count)d 粉丝"
 
-#: templates/user.html:13
+#: app/templates/user.html:13
 #, python-format
 msgid "%(count)d following"
 msgstr "%(count)d 关注"
 
-#: templates/user.html:15
+#: app/templates/user.html:15
 msgid "Edit your profile"
 msgstr "修改信息"
 
-#: templates/user.html:20
+#: app/templates/user.html:20
 msgid "Follow"
 msgstr "关注"
 
-#: templates/user.html:27
+#: app/templates/user.html:27
 msgid "Unfollow"
 msgstr "取消关注"
 
