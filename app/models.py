@@ -4,9 +4,8 @@
     @Author  ：cong.jin
     @Date    ：2021/5/21 16:31 
 """
-import app
-from app import app, db
-from app import login
+from app import db, login
+from flask import current_app
 from hashlib import md5
 from datetime import datetime
 from flask_login import UserMixin
@@ -42,7 +41,7 @@ class User(UserMixin, db.Model):
     def get_reset_password_token(self, expires_in=600):
         return jwt.encode(
             {'reset_password': self.id, 'exp': time() + expires_in},
-            app.config['SECRET_KEY'],
+            current_app.config['SECRET_KEY'],
             algorithm='HS256'
         )
 
@@ -51,7 +50,7 @@ class User(UserMixin, db.Model):
         try:
             id = jwt.decode(
                 token,
-                app.config['SECRET_KEY'],
+                current_app.config['SECRET_KEY'],
                 algorithms='HS256'
             )['reset_password']
         except Exception as ex:

@@ -4,8 +4,11 @@
     @Author  ：cong.jin
     @Date    ：2021/5/21 11:08 
 """
-from app import app, db, cli
+from app import db, cli, create_app
 from app.models import User, Post
+
+app = create_app()
+cli.register(app)
 
 
 @app.shell_context_processor
