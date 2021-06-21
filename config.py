@@ -35,3 +35,6 @@ class Config(object):
 
     # elasticsearch
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
+
+    # log
+    LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
