@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-06-09 19:12+0800\n"
+"POT-Creation-Date: 2021-06-25 14:29+0800\n"
 "PO-Revision-Date: 2021-06-02 17:43+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh\n"
@@ -112,7 +112,7 @@ msgstr "关于我"
 msgid "Say something"
 msgstr "说点什么"
 
-#: app/main/forms.py:41 app/main/routes.py:72
+#: app/main/forms.py:41 app/main/routes.py:71
 #, fuzzy
 msgid "Search"
 msgstr "搜索"
@@ -129,43 +129,43 @@ msgstr "主页"
 msgid "Explore"
 msgstr "探索"
 
-#: app/main/routes.py:96
+#: app/main/routes.py:103
 msgid "Your changes have been saved!"
 msgstr "您的修改已保存！"
 
-#: app/main/routes.py:101 app/templates/edit_profile.html:5
+#: app/main/routes.py:108 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "编辑"
 
-#: app/main/routes.py:109 app/main/routes.py:125
+#: app/main/routes.py:116 app/main/routes.py:132
 #, python-format
 msgid "User %(username)s not found!"
 msgstr "用户 %(username)s 不存在！"
 
-#: app/main/routes.py:112
+#: app/main/routes.py:119
 msgid "You cannot follow yourself!"
 msgstr "你不能关注你自己！"
 
-#: app/main/routes.py:116
+#: app/main/routes.py:123
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "你已关注 %(username)s！"
 
-#: app/main/routes.py:128
+#: app/main/routes.py:135
 msgid "You cannot unfollow yourself!"
 msgstr "你不能取消关注你自己！"
 
-#: app/main/routes.py:132
+#: app/main/routes.py:139
 #, python-format
 msgid "You are not following %(username)s!"
 msgstr "你已取消关注 %(username)s！"
 
-#: app/templates/_post.html:14
+#: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s 说 %(when)s"
 
-#: app/templates/_post.html:24
+#: app/templates/_post.html:26
 msgid "Translate"
 msgstr "翻译"
 
@@ -218,16 +218,16 @@ msgstr "下一页"
 msgid "User"
 msgstr "用户"
 
-#: app/templates/user.html:11
+#: app/templates/user.html:11 app/templates/user_popup.html:13
 msgid "Last seen on"
 msgstr "上次登录"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:16
 #, python-format
 msgid "%(count)d followers"
 msgstr "%(count)d 粉丝"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:17
 #, python-format
 msgid "%(count)d following"
 msgstr "%(count)d 关注"
@@ -236,11 +236,11 @@ msgstr "%(count)d 关注"
 msgid "Edit your profile"
 msgstr "修改信息"
 
-#: app/templates/user.html:20
+#: app/templates/user.html:20 app/templates/user_popup.html:21
 msgid "Follow"
 msgstr "关注"
 
-#: app/templates/user.html:27
+#: app/templates/user.html:27 app/templates/user_popup.html:25
 msgid "Unfollow"
 msgstr "取消关注"
 
