@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-06-25 14:29+0800\n"
+"POT-Creation-Date: 2021-07-02 15:18+0800\n"
 "PO-Revision-Date: 2021-06-02 17:43+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh\n"
@@ -101,6 +101,7 @@ msgid "Your password has been reset."
 msgstr "您的密码已重置。"
 
 #: app/main/forms.py:16 app/main/forms.py:22 app/main/forms.py:37
+#: app/main/forms.py:53
 msgid "Submit"
 msgstr "提交"
 
@@ -116,6 +117,10 @@ msgstr "说点什么"
 #, fuzzy
 msgid "Search"
 msgstr "搜索"
+
+#: app/main/forms.py:52
+msgid "Message"
+msgstr "消息"
 
 #: app/main/routes.py:40
 msgid "Your post is now live!"
@@ -160,6 +165,15 @@ msgstr "你不能取消关注你自己！"
 msgid "You are not following %(username)s!"
 msgstr "你已取消关注 %(username)s！"
 
+#: app/main/routes.py:165
+#, fuzzy
+msgid "Your message has been sent."
+msgstr "您的密码已重置。"
+
+#: app/main/routes.py:167
+msgid "Send Message"
+msgstr "发消息"
+
 #: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
@@ -177,15 +191,19 @@ msgstr "欢迎来到Microblog"
 msgid "Login"
 msgstr "登陆"
 
-#: app/templates/base.html:42
+#: app/templates/base.html:44 app/templates/messages.html:4
+msgid "Messages"
+msgstr "消息"
+
+#: app/templates/base.html:51
 msgid "Profile"
 msgstr "个人信息"
 
-#: app/templates/base.html:44
+#: app/templates/base.html:53
 msgid "Logout"
 msgstr "退出"
 
-#: app/templates/base.html:81
+#: app/templates/base.html:90
 msgid "Error: Could not contact server."
 msgstr "错误：不能连接服务器！"
 
@@ -194,12 +212,20 @@ msgstr "错误：不能连接服务器！"
 msgid "Hi, %(username)s!"
 msgstr "你好, %(username)s!"
 
-#: app/templates/index.html:17 app/templates/user.html:41
+#: app/templates/index.html:17 app/templates/user.html:46
 msgid "Newer posts"
 msgstr "上一页"
 
-#: app/templates/index.html:22 app/templates/user.html:46
+#: app/templates/index.html:22 app/templates/user.html:51
 msgid "Older posts"
+msgstr "下一页"
+
+#: app/templates/messages.html:12
+msgid "Newer messages"
+msgstr "上一页"
+
+#: app/templates/messages.html:17
+msgid "Older messages"
 msgstr "下一页"
 
 #: app/templates/search.html:4
@@ -213,6 +239,11 @@ msgstr "上一页"
 #: app/templates/search.html:18
 msgid "Next results"
 msgstr "下一页"
+
+#: app/templates/send_message.html:5
+#, python-format
+msgid "Send Message to %(recipient)s"
+msgstr "发消息给 %(recipient)s"
 
 #: app/templates/user.html:8
 msgid "User"
@@ -243,6 +274,10 @@ msgstr "关注"
 #: app/templates/user.html:27 app/templates/user_popup.html:25
 msgid "Unfollow"
 msgstr "取消关注"
+
+#: app/templates/user.html:33
+msgid "Send private message"
+msgstr "私信"
 
 #: app/templates/auth/login.html:12
 msgid "New User?"
